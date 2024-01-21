@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-cover {
   height: 1000px;
   background-size: contain;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
@@ -327,39 +327,45 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 1000px;
+    height: 900px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .fh5co-cover {
+    height: 525px;
   }
 }
 .fh5co-cover .display-t,
 .fh5co-cover .display-tc {
-  height: 1000px;
+  height: 900px;
   display: table;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover .display-t,
   .fh5co-cover .display-tc {
-    height: 1000px;
+    height: 600px;
   }
 }
 .fh5co-cover.fh5co-cover-sm {
-  height: 1000px;
+  height: 600px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover-sm {
-    height: 1000px;
+    height: 400px;
   }
 }
 .fh5co-cover.fh5co-cover-sm .display-t,
 .fh5co-cover.fh5co-cover-sm .display-tc {
-  height: 1000px;
+  height: 600px;
   display: table;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover-sm .display-t,
   .fh5co-cover.fh5co-cover-sm .display-tc {
-    height: 1000px;
+    height: 400px;
   }
 }
 
@@ -414,7 +420,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-event .event-wrap {
   border: 2px solid rgba(0, 0, 0, 0.5);
   background: rgba(255, 255, 255, 0.6);
-  padding: 30px;
+  padding: 15px;
   width: 100%;
   float: left;
   -webkit-border-radius: 4px;
@@ -1564,11 +1570,11 @@ form label {
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
-  color: #fff;
-  background: #fff;
+  color: black;
+  background: black;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i::before, .fh5co-nav-toggle.fh5co-nav-white > i::after {
-  background: #fff;
+  background: black;
 }
 
 .fh5co-nav-toggle i::before {

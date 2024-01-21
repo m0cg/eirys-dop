@@ -71,6 +71,7 @@
 					<ul>
 						<li class="active"><a href="index.html">Inicio</a></li>
 						<li class="active"><a href="#fh5co-event">Evento</a></li>
+						<li class="active"><a href="#fh5co-started">Confirmar</a></li>
 					</ul>
 				</div>
 			</div>
@@ -78,22 +79,22 @@
 		</div>
 	</nav>
 
-	<!-- <img src="images/inv.png" alt="amelia" class="inv-center"> -->
-
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/bible.jpg);" data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div> -->
-		<!-- <div class="container"> -->
-		<img src="images/inv.png" alt="amelia" class="inv-center">
+		<div class="container">
+			<img src="images/inv.png" alt="amelia" class="inv-center">
+		</div>
 	</header>
 
 	<div id="fh5co-couple" class="fh5co-bg" role="banner" style="background-image:url(images/room.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h2>Sugerencia de regalos: Detalles pequeños o ropa (Talla:)<br></h2>
+							<h3>Nuestro mejor regalo es que estés con nosotros,<br>pero si quieres hacernos un obsequio,<br>lo podrás depositar en un cofre el día del evento.<br><br></h3>
+							<h3>Sólo faltan:</h3>
 							<div class="flipTimebox">
 								<div class="clock clock-fix"></div>
 							</div>
@@ -129,7 +130,7 @@
 										<i class="icon-clock"></i>
 										<span>10:30 AM</span>
 									</div>
-									<p>Iglesia <b>Sagrado Corazon de Jesús. Navojoa</b> </p>
+									<p>Iglesia <b>Sagrado Corazon de Jesús. Navojoa, Son.</b> </p>
 									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5404.347971251405!2d-109.45222649688947!3d27.082185612586773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86b81b38c94a87f1%3A0x45debbb8a9d4fd47!2sParroquia%20del%20Sagrado%20Coraz%C3%B3n%20de%20Jes%C3%BAs!5e0!3m2!1sen!2sse!4v1705237860107!5m2!1sen!2sse" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								</div>
 							</div>
@@ -145,7 +146,7 @@
 										<i class="icon-clock"></i>
 										<span>12:00 PM</span>
 									</div>
-									<p>En <b>Casa Mendoza. Navojoa</b></p>
+									<p>En <b>Casa Mendoza. Navojoa, Son.</b></p>
 									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473.29920373469173!2d-109.45758892351714!3d27.076857480598488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86b81baa558179b1%3A0xdf0543402c1c22f4!2sFrida%E2%80%99s%20baby%20boutique!5e0!3m2!1sen!2sse!4v1705238648821!5m2!1sen!2sse" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								</div>
 							</div>
@@ -156,32 +157,50 @@
 		</div>
 	</div>
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/bg3.jpg);">
+	<div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+					</button>
+					<div class="section-padding">
+						<h3>Muchas gracias!</h3>
+						<p>Estamos emocionados por verlos el día del evento.</p>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/bg3.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Confirmar asistencia</h2>
-					<p>Favor de agregar el número total de personas.</p>
+					<p><br>Favor de confirmar el número total de personas.</p>
 				</div>
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline">
+					<form id="rsvp-form" class="form-inline" action="" method="POST">
+						<div class="row">
+							<div class="col-md-12" id="alert-wrapper"></div>
+						</div>
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">Nombre</label>
-								<input type="name" class="form-control" id="name" placeholder="Nombre">
+								<input type="name" class="form-control" id="name" name="name" placeholder="Nombre" required>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="number" class="sr-only">Número de personas</label>
-								<input type="number" class="form-control" id="number" placeholder="Número de personas">
+								<input type="number" min="1" oninput="validity.valid||(value='');" class="form-control" id="number" name="number" placeholder="Número de personas" required>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">Enviar</button>
+							<button class="btn btn-default btn-block">Enviar</button>
 						</div>
 					</form>
 				</div>
@@ -215,6 +234,7 @@
 
 	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
 	<script src="js/simplyCountdown.js"></script>
+	<script src="js/rsvp.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	</body>

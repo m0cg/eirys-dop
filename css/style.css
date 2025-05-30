@@ -1007,7 +1007,7 @@ form label {
   .fh5co-bg,
   #fh5co-couple {
     height: auto !important;
-    min-height: 400px;
+    min-height: calc(100vw * 1.5);
     background-size: cover;
     background-position: center center;
   }

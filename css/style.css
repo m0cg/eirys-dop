@@ -993,6 +993,26 @@ form label {
   }
 }
 
+@media screen and (max-width: 950px) {
+  .fh5co-bg,
+  #fh5co-couple {
+    height: auto !important;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-bg,
+  #fh5co-couple {
+    height: auto !important;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
 .fh5co-section-gray {
   background: rgba(0, 0, 0, 0.04);
 }
